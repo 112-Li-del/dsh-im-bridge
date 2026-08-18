@@ -1,0 +1,5 @@
+node_modules/
+*.log
+.DS_Store
+# lib/ 产物提交入库（git 安装不跑构建），不要 ignore
+.eval-out/

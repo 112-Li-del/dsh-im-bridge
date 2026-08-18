@@ -1,0 +1,9 @@
+# 桥插件挂载回归：需要工具调用的任务在插件在场时仍走通（tools/* 事件链不受污染）
+name: bridge-mounted-tool-use
+prompt: "请用 todo_write 建一个只有一项『验证桥插件』的 todo，然后回复 done"
+assert:
+  turn_end: completed
+  tools_called: [todo_write]
+  output_contains: ["done"]
+  max_steps: 6
+  no_tool_errors: true

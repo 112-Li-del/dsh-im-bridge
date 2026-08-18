@@ -1,0 +1,8 @@
+# 桥插件挂载回归：插件加载后普通任务仍正常完成（不干扰 agent loop / approval 链）
+name: bridge-mounted-simple-task
+prompt: "请直接回复：bridge ok（不要调用任何工具，不要输出其他内容）"
+assert:
+  turn_end: completed
+  output_contains: ["bridge ok"]
+  max_steps: 2
+  no_tool_errors: true
